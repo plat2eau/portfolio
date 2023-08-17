@@ -1,5 +1,8 @@
 # React + TypeScript + Vite
 
+Figma UX Design
+https://www.figma.com/file/ifcnzyUx27avtEc41xMtNg/Portfolio-for-Developers-Concept-V.2-(Community)
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

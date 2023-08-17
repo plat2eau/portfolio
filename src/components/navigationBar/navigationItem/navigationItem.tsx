@@ -8,7 +8,10 @@ export type NavigationItemProps = {
 function NavigationItem(props: NavigationItemProps) {
   return (
     <div className="navigation-item">
-      <div className="navigation-item-text">{props.text}</div>
+      <div
+        className="navigation-item-text">
+        {props.text}
+      </div>
       <div
         className="active-tab-indicator"
         style={{ backgroundColor: props.isActive ? "#FEA55F" : "" }}

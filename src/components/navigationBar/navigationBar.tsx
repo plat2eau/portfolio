@@ -20,12 +20,19 @@ function NavigationBar() {
     text: "_projects",
     isActive: false,
   };
+  let props5: NavigationItemProps = {
+    text: "_contact-me",
+    isActive: false,
+  };
   return (
     <div className="navigation-bar">
       <NavigationItem {...props1} />
       <NavigationItem {...props2} />
       <NavigationItem {...props3} />
       <NavigationItem {...props4} />
+      <div className="contact-me">
+        <NavigationItem {...props5} />
+      </div>
     </div>
   );
 }

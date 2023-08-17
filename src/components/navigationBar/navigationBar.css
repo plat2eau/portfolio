@@ -1,6 +1,9 @@
-
 .navigation-bar {
-    border: 1px solid #1e2d3d;
-    overflow: hidden;
-  }
-  
+  border: 1px solid #1e2d3d;
+  overflow: hidden;
+}
+
+.contact-me {
+  float: right;
+  box-shadow: inset 1px 0 0 0 #1e2d3d;
+}
