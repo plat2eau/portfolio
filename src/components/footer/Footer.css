@@ -1,0 +1,6 @@
+.footer-container {
+    bottom: 0px;
+    width: 100vw;
+    flex-shrink: 0;
+    flex-grow: 0;
+}

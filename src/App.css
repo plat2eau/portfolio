@@ -1,9 +1,18 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0px;
   padding: 0px;
+  height: 100%;
   font-family: "Fira Code";
-
-  --header-primary-font-color: #607b96;
+  color: #E5E9F0;
+  --secondary-color: #607b96;
+  --header-border-color: #1e2d3d;
+  --header-active-tab-color: #FEA55F;
+  --role-description-color: #4D5BCE;
+  overflow: hidden;
 }
 
 .background-color {
@@ -12,7 +21,42 @@ body {
 }
 
 .background-layout {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  position: fixed;
+  width: 100%;
+}
+
+h1 {
+  font-size: 62px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 450;
+  margin: 0px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 450;
+  margin: 0px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 450;
+  margin: 8px;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
 }

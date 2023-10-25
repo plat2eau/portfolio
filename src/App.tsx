@@ -1,5 +1,7 @@
 import "./App.css";
-import Header from "./components/header/header";
+import Layout from './components/Layout.js'
+import 'remixicon/fonts/remixicon.css'
+import Home from "./screens/home.js";
 
 function App() {
   return (
@@ -9,12 +11,9 @@ function App() {
         href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
         rel="stylesheet"
       />
-      <audio id="audio" loop autoPlay>
-        <source src="./music.mp3" type="audio/mpeg" />
-      </audio>
-      <div className="background-color background-layout">
-        <Header />
-      </div>
+      <Layout>
+        <Home />
+      </Layout>
     </>
   );
 }

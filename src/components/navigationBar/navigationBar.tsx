@@ -1,40 +1,21 @@
-import "./navigationBar.css";
-import NavigationItem, {
-  NavigationItemProps,
-} from "./navigationItem/navigationItem";
+import PropTypes, { InferProps } from "prop-types";
+import "./NavigationBar.css";
 
-function NavigationBar() {
-  let props1: NavigationItemProps = {
-    text: "akhilesh-sharma",
-    isActive: false,
-  };
-  let props2: NavigationItemProps = {
-    text: "_hello",
-    isActive: true,
-  };
-  let props3: NavigationItemProps = {
-    text: "_about-me",
-    isActive: false,
-  };
-  let props4: NavigationItemProps = {
-    text: "_projects",
-    isActive: false,
-  };
-  let props5: NavigationItemProps = {
-    text: "_contact-me",
-    isActive: false,
-  };
+const NavigationBarPropTypes = {
+  children: PropTypes.any,
+  styles: PropTypes.any
+}
+
+export type NavigationBarProps = InferProps<typeof NavigationBarPropTypes>
+
+const NavigationBar = (props: NavigationBarProps) => {
   return (
-    <div className="navigation-bar">
-      <NavigationItem {...props1} />
-      <NavigationItem {...props2} />
-      <NavigationItem {...props3} />
-      <NavigationItem {...props4} />
-      <div className="contact-me">
-        <NavigationItem {...props5} />
-      </div>
-    </div>
+    <div className="navigation-bar" style={props.styles} >
+      {props.children}
+    </div >
   );
 }
+
+NavigationBar.propTypes = NavigationBarPropTypes
 
 export default NavigationBar;

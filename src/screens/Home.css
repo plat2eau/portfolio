@@ -1,0 +1,51 @@
+.home-main-container {
+    flex-grow: 1;
+}
+
+.home-content {
+    display: flex;
+    margin-top: 20vh;
+    margin-left: 20vw;
+}
+
+.home-text {
+    flex-grow: 1;
+}
+
+.home-game {
+    flex-grow: 1;
+    align-items: end;
+}
+
+.font-blue {
+    color: var(--role-description-color)
+}
+
+.font-secondary {
+    color: var(--secondary-color)
+}
+
+.game-intro {
+    margin-top: 80px;
+
+    font-weight: 500;
+
+    font-size: 16px;
+}
+
+#github-const {
+    color: #4D5BCE
+}
+
+#github-githubLink {
+    color: #43D9AD
+}
+
+#github-equals-sign {
+    color: white
+}
+
+#github-link-string {
+    color: #E99287;
+    text-decoration-line: underline;
+}

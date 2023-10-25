@@ -1,12 +1,52 @@
-import NavigationBar from "../navigationBar/navigationBar";
-import "./header.css";
+import { InferProps } from 'prop-types'
+import NavigationBar from '../navigationBar/NavigationBar';
+import NavigationItem, { NavigationItemProps } from '../navigationBar/navigationItem/NavigationItem';
+import './Header.css'
 
-function Header() {
+const HeaderPropTypes = {}
+
+export type HeaderProps = InferProps<typeof HeaderPropTypes>
+
+const Header = (props: HeaderProps) => {
+  let props1: NavigationItemProps = {
+    text: "akhilesh-sharma",
+    isActive: false
+  };
+  let props2: NavigationItemProps = {
+    text: "_hello",
+    isActive: true,
+    onClick: () => { }
+  };
+  let props3: NavigationItemProps = {
+    text: "_about-me",
+    isActive: false,
+    onClick: () => { }
+  };
+  let props4: NavigationItemProps = {
+    text: "_projects",
+    isActive: false,
+    onClick: () => { }
+  };
+  let props5: NavigationItemProps = {
+    text: "_contact-me",
+    isActive: false,
+    onClick: () => { }
+  };
   return (
     <div className="header-layout">
-      <NavigationBar/>
+      <NavigationBar>
+        <NavigationItem {...props1} styles={{ width: "13vw" }} />
+        <NavigationItem {...props2} />
+        <NavigationItem {...props3} />
+        <NavigationItem {...props4} />
+        <div className="right-align-item">
+          <NavigationItem {...props5} />
+        </div>
+      </NavigationBar>
     </div>
   );
 }
+
+Header.propTypes = HeaderPropTypes
 
 export default Header;

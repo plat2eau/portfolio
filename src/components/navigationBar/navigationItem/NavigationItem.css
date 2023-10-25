@@ -1,0 +1,50 @@
+.navigation-item {
+  float: left;
+  border-right: 1px solid var(--header-border-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.navigation-item-content {
+  display: flex;
+  padding: 6px 24px;
+}
+
+.navigation-item:hover {
+  color: white;
+}
+
+.navigation-item:hover>.active-tab-indicator {
+  animation-name: activeTabAnimation;
+  animation-duration: 0.25s;
+  width: 100%;
+}
+
+@keyframes activeTabAnimation {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.navigation-item-text {
+  line-height: normal;
+  width: fit-content;
+  padding: 6px 0px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.navigation-item-icon {
+  flex-grow: 1;
+}
+
+.active-tab-indicator {
+  width: 0%;
+  height: 3px;
+  background-color: var(--header-active-tab-color);
+  animation-timing-function: ease-out;
+}

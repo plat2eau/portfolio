@@ -1,9 +1,4 @@
 .navigation-bar {
-  border: 1px solid #1e2d3d;
+  border-bottom: 1px solid var(--header-border-color);
   overflow: hidden;
-}
-
-.contact-me {
-  float: right;
-  box-shadow: inset 1px 0 0 0 #1e2d3d;
 }

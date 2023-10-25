@@ -1,16 +1,30 @@
-import "./navigationItem.css";
+import "./NavigationItem.css";
+import PropTypes, { InferProps } from "prop-types";
 
-export type NavigationItemProps = {
-  text: string;
-  isActive: boolean;
-};
+const NavigationItemPropTypes = {
+  text: PropTypes.string,
+  isActive: PropTypes.bool,
+  onClick: PropTypes.func,
+  styles: PropTypes.any,
+  icon: PropTypes.string
+}
+
+export type NavigationItemProps = InferProps<typeof NavigationItemPropTypes>
 
 function NavigationItem(props: NavigationItemProps) {
   return (
-    <div className="navigation-item">
-      <div
-        className="navigation-item-text">
-        {props.text}
+    <div className="navigation-item"
+      style={{ ...props.styles, pointerEvents: `${!props.onClick ? "none" : "auto"}` }}
+      onClick={props.onClick ? props.onClick : () => { }}>
+      <div className="navigation-item-content">
+        {props.text && <div
+          className="navigation-item-text">
+          {props.text}
+        </div>}
+        {props.icon && <div
+          className="navigation-item-icon">
+          <i className={props.icon}></i>
+        </div>}
       </div>
       <div
         className="active-tab-indicator"
@@ -19,5 +33,7 @@ function NavigationItem(props: NavigationItemProps) {
     </div>
   );
 }
+
+NavigationItem.propTypes = NavigationItemPropTypes
 
 export default NavigationItem;
