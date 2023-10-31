@@ -3,7 +3,7 @@ import Layout from './components/layout/Layout.js'
 import 'remixicon/fonts/remixicon.css'
 import Home from "./screens/home/Home.js";
 import AboutMe from "./screens/aboutMe/AboutMe.js";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Projects from "./screens/projects/Projects.js";
 
 function App() {
@@ -18,9 +18,10 @@ function App() {
       <BrowserRouter>
         <Layout>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about-me" element={<AboutMe />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/" element={<Navigate to="/portfolio" />} />
+            <Route path="/portfolio/" element={<Home />} />
+            <Route path="/portfolio/about-me" element={<AboutMe />} />
+            <Route path="/portfolio/projects" element={<Projects />} />
           </Routes>
         </Layout>
       </BrowserRouter>
