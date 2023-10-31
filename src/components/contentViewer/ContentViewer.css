@@ -1,0 +1,37 @@
+.content-viewer-container {
+    height: 100%;
+    width: 100%;
+    background-color: crimson;
+    display: flex;
+    flex-direction: column;
+}
+
+.cv-tab-container {
+    background-color: black;
+    flex-grow: 0;
+    height: 50px;
+}
+
+.cv-childern-container {
+    flex-grow: 20;
+    background-color: blue;
+}
+
+.cv-tab {
+    background-color: palevioletred;
+    height: 100%;
+    width: 200px;
+    display: flex;
+}
+
+.cv-tab-name {
+    flex-grow: 1;
+    margin-left: 5px;
+    text-align: center;
+    margin: 14px 8px;
+}
+
+.cv-close-icon {
+    flex-grow: 0;
+    padding: 14px 8px;
+}

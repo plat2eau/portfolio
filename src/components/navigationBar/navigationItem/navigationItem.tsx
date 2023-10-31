@@ -23,7 +23,7 @@ function NavigationItem(props: NavigationItemProps) {
         </div>}
         {props.icon && <div
           className="navigation-item-icon">
-          <i className={props.icon}></i>
+          <i className={props.icon} />
         </div>}
       </div>
       <div

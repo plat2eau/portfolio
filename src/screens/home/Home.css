@@ -18,11 +18,11 @@
 }
 
 .font-blue {
-    color: var(--role-description-color)
+    color: var(--secondary-3)
 }
 
 .font-secondary {
-    color: var(--secondary-color)
+    color: var(--secondary-1)
 }
 
 .game-intro {

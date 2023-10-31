@@ -2,12 +2,16 @@ import { InferProps } from 'prop-types'
 import NavigationBar from '../navigationBar/NavigationBar';
 import NavigationItem, { NavigationItemProps } from '../navigationBar/navigationItem/NavigationItem';
 import './Header.css'
+import { useNavigate } from 'react-router-dom';
 
 const HeaderPropTypes = {}
 
 export type HeaderProps = InferProps<typeof HeaderPropTypes>
 
 const Header = (props: HeaderProps) => {
+
+  const navigation = useNavigate();
+
   let props1: NavigationItemProps = {
     text: "akhilesh-sharma",
     isActive: false
@@ -15,17 +19,17 @@ const Header = (props: HeaderProps) => {
   let props2: NavigationItemProps = {
     text: "_hello",
     isActive: true,
-    onClick: () => { }
+    onClick: () => { navigation("/") }
   };
   let props3: NavigationItemProps = {
     text: "_about-me",
     isActive: false,
-    onClick: () => { }
+    onClick: () => { navigation("/about-me") }
   };
   let props4: NavigationItemProps = {
     text: "_projects",
     isActive: false,
-    onClick: () => { }
+    onClick: () => { navigation("/projects") }
   };
   let props5: NavigationItemProps = {
     text: "_contact-me",
@@ -35,7 +39,7 @@ const Header = (props: HeaderProps) => {
   return (
     <div className="header-layout">
       <NavigationBar>
-        <NavigationItem {...props1} styles={{ width: "13vw" }} />
+        <NavigationItem {...props1} styles={{ width: "400px" }} />
         <NavigationItem {...props2} />
         <NavigationItem {...props3} />
         <NavigationItem {...props4} />

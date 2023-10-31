@@ -1,4 +1,4 @@
 .navigation-bar {
-  border-bottom: 1px solid var(--header-border-color);
+  border-bottom: 1px solid var(--lines);
   overflow: hidden;
 }

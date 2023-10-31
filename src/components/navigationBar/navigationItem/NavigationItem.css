@@ -1,13 +1,13 @@
 .navigation-item {
   float: left;
-  border-right: 1px solid var(--header-border-color);
-  color: var(--secondary-color);
+  border-right: 1px solid var(--lines);
+  color: var(--secondary-1);
   cursor: pointer;
 }
 
 .navigation-item-content {
-  display: flex;
-  padding: 6px 24px;
+  padding: 10px 10px;
+  text-align: center;
 }
 
 .navigation-item:hover {
@@ -31,20 +31,19 @@
 }
 
 .navigation-item-text {
-  line-height: normal;
-  width: fit-content;
-  padding: 6px 0px;
-  text-align: center;
-  flex-grow: 1;
+  padding: 8px 8px;
+  display: inline;
 }
 
 .navigation-item-icon {
-  flex-grow: 1;
+  opacity: 0.4;
+  padding: 10px;
+  display: inline;
 }
 
 .active-tab-indicator {
   width: 0%;
   height: 3px;
-  background-color: var(--header-active-tab-color);
+  background-color: var(--accent-1);
   animation-timing-function: ease-out;
 }
