@@ -4,17 +4,15 @@
 
 .home-content {
     display: flex;
-    margin-top: 20vh;
-    margin-left: 20vw;
+    margin: 20vh 20vw auto 20vw;
 }
 
 .home-text {
-    flex-grow: 1;
+    flex: 2 1 auto
 }
 
 .home-game {
-    flex-grow: 1;
-    align-items: end;
+    flex: 1 1 auto
 }
 
 .font-blue {
@@ -26,7 +24,7 @@
 }
 
 .game-intro {
-    margin-top: 80px;
+    margin-top: 150px;
 
     font-weight: 500;
 
